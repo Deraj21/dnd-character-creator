@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Roboto')
+@import 'reset.sass'
+
+body
+  font-family: 'Roboto', sans-serif
+
+div
+  box-sizing: border-box
+  
+h1, h2, h3, h4, p, td, li
+  text-transform: uppercase
+
+h1
+  font-size: 30px
+
+h2
+  font-size: 20px
+
+h3
+  font-size: 14px
+
+h4
+  font-size: 12px
+  font-weight: bold
+
+p
+  font-size: 8px
+
+ol
+  list-style-type: decimal
+  padding: 2px 2em
+
+td
+  font-size: 14px
+
+.hand
+  font-family: 'Nothing You Could Do', cursive
+  text-transform: none
+  font-size: 16px
+
+.white-box
+  background-color: white
+  border: 3px double black
+  border-radius: 5px
+  margin: 2px
+  padding: 5px
+
+.gray-box
+  background-color: lightgray
+  border: 6px double white
+  border-radius: 7px
+  margin: 5px
+  padding: 2px
+  
+
+.hand-big
+  font-size: 20px
+
+.post-script
+  width: 8.5in
+  margin: auto
+  margin-bottom: 40px
+  font-size: 12px
+
+.page
+  margin: auto
+  margin-top: 20px
+  display: flex
+  flex-direction: column
+  height: 11in
+  width: 8.5in
+  background-color: white
+
+  .Header
+    // height: 1in
+    margin-left: 50px
+  
+  .middle
+    display: flex
+    justify-content: space-around
+  
+    .AbilitiesBox, .middle-center, .middle-right
+      width: 258px
+
+  .footer
+    display: flex
+    justify-content: space-around
+
+    .second
+      width: 516px
+
+
+@import 'Header.sass'
+@import 'TextBox.sass'
+@import 'AbilitiesBox.sass'
+@import 'Ability.sass'
+@import 'SmallAbility.sass'
+@import 'BattleStats.sass'
+@import 'Stat.sass'
+@import 'DeathSaves.sass'

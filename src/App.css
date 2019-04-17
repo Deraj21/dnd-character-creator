@@ -1,33 +1,350 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Roboto");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, p, td, li {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+h4 {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 8px;
+}
+
+ol {
+  list-style-type: decimal;
+  padding: 2px 2em;
+}
+
+td {
+  font-size: 14px;
+}
+
+.hand {
+  font-family: "Nothing You Could Do", cursive;
+  text-transform: none;
+  font-size: 16px;
+}
+
+.white-box {
+  background-color: white;
+  border: 3px double black;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 5px;
+}
+
+.gray-box {
+  background-color: lightgray;
+  border: 6px double white;
+  border-radius: 7px;
+  margin: 5px;
+  padding: 2px;
+}
+
+.hand-big {
+  font-size: 20px;
+}
+
+.post-script {
+  width: 8.5in;
+  margin: auto;
+  margin-bottom: 40px;
+  font-size: 12px;
+}
+
+.page {
+  margin: auto;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
+  height: 11in;
+  width: 8.5in;
+  background-color: white;
+}
+.page .Header {
+  margin-left: 50px;
+}
+.page .middle {
+  display: flex;
+  justify-content: space-around;
+}
+.page .middle .AbilitiesBox, .page .middle .middle-center, .page .middle .middle-right {
+  width: 258px;
+}
+.page .footer {
+  display: flex;
+  justify-content: space-around;
+}
+.page .footer .second {
+  width: 516px;
+}
+
+.Header {
+  display: flex;
+  flex-direction: row;
+}
+.Header .left .character-name {
+  border-radius: 5px 0px 0px 5px;
+  padding: 10px;
+  margin: 0px;
+  border-right: none;
+}
+.Header .left p {
+  padding: 0px 0px 0px 10px;
+}
+.Header .left .hand {
+  border-bottom: 1px solid gray;
+  font-size: 24px;
+}
+.Header .attributes-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px 2px 0px 2px;
+  margin: 0px;
+  border-radius: 0px 10px 10px 0px;
+}
+.Header .attributes-box .attributes {
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  margin: 5px 0px;
+}
+.Header .attributes-box .attributes .attribute {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.Header .attributes-box .attributes .attribute p {
+  padding: 0px 20px;
+}
+.Header .attributes-box .attributes .attribute .hand {
+  border-bottom: 1px solid gray;
+}
+
+.TextBox {
+  margin: 5px;
+  padding: 10px;
+}
+.TextBox table {
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+.TextBox table .hand {
+  background: lightgray;
+  border-radius: 3px;
+  padding: 3px 5px;
+  font-size: 14px;
+}
+.TextBox .col {
+  display: inline-block;
+}
+.TextBox .text-line {
+  border-bottom: 1px solid lightgray;
+  line-height: 7px;
+  padding: 3px;
+  padding-left: 10px;
+  margin: 3px;
+}
+.TextBox .title {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.AbilitiesBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.Ability {
+  display: flex;
+  margin: 5px;
+}
+.Ability .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px 5px 10px;
+  margin: 0px;
+  width: 75px;
+  height: 70px;
+}
+.Ability .left .score {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0% 0% 5px 5px;
+  width: 35%;
+  text-align: center;
+  box-sizing: border-box;
+}
+.Ability .left .modifier {
+  margin: 5px;
+}
+.Ability .left .name {
+  font-weight: bold;
+}
+.Ability .right {
+  border-top: 1.5px solid black;
+  padding-right: 10px;
+}
+.Ability .right .skill {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  letter-spacing: 1px;
+}
+.Ability .right .skill .modifier {
+  border-bottom: 1px solid black;
+  margin: 0px 5px;
+  padding: 0px 5px;
+}
+.Ability .right .skill input {
+  margin: 1px 3px;
+}
+
+.SmallAbility {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+  margin: 3px 15px;
+}
+.SmallAbility .score, .SmallAbility .name {
+  background-color: white;
+}
+.SmallAbility .score {
+  padding: 0px 10px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SmallAbility .score p {
+  text-align: center;
+}
+.SmallAbility .name {
+  border-left: none;
+  margin: 5px 0px;
+  padding: 10px;
+  border-radius: 0px 7px 7px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.BattleStats {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.BattleStats > .row {
+  display: flex;
+  justify-content: space-around;
+  padding: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin: 5px 5px;
 }
+.Stat .hand {
+  margin: 10px;
+}
+.Stat .max {
+  display: flex;
+}
+.Stat .max .hand {
+  border-bottom: 1px solid gray;
+  padding: 0px 25px;
+  margin: 0px;
+}
+
+.DeathSaves {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.DeathSaves p {
+  text-align: center;
+}
+.DeathSaves .row {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px 0px;
+}
+
+/*# sourceMappingURL=App.css.map */

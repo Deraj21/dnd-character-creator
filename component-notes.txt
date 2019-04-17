@@ -1,0 +1,36 @@
+--- CHARACTER GENERATOR COMPONENTS ---
+
+-Header
+  character_name; str
+  character_info; arr of info { name: str, value: int OR str }
+
+-TextBox
+  title; str; at bottom of box
+  content; arr of str; lines of text naming items/attributes
+  columns; int; number of columns
+
+-AbilitiesBox
+  Abilities; arr of Abilities; 6 regular ones
+  SmallAbilities; arr of SmallAbilities; 3 of them; 2 at top, one at bottom
+  
+-Ability
+  name; str;
+  score; int (1-20); 
+  getModifier; funct; gets modifier for given ability score
+  skills; arr of skills { hasSkill: bool, modifier: int, name: str }; list of skills to the right of ech ability
+  
+-SmallAbility
+  name; str;
+  score; int(1-20);
+  
+BattleStats
+  obj of battleStat data
+  
+BattleStat
+  name: str
+  value: int
+  max: { maxName: str, maxValue: int }
+  
+DeathSaves
+  successes; int
+  failures; int
