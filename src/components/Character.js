@@ -1,6 +1,6 @@
 import DATA from '../data';
 import axios from 'axios';
-const DND_BASE_URL = "http://www.dnd5eapi.co/api";
+const DND_BASE_URL = "https://www.dnd5eapi.co/api";
 
 export default class Character {
 
