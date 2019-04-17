@@ -6,6 +6,9 @@ It has a bare-bones single-page design. I mimicked the look of a Dungeon and Dra
 
 This site is hosted [here](https://deraj21.github.io/dnd-character-creator) via github-pages.
 
+![screenshot](https://raw.githubusercontent.com/Deraj21/dnd-character-creator/master/dnd-csg-screenshot.JPG "Character Sheet Creator Screenshot")
+![printable](https://raw.githubusercontent.com/Deraj21/dnd-character-creator/master/printable-screenshot.JPG "Printable Character Sheet")
+
 ## Laundry list of Future Plans
 - [ ] Find a better D&D api that uses https
 - [ ] Style a little more tightly
@@ -16,6 +19,6 @@ This site is hosted [here](https://deraj21.github.io/dnd-character-creator) via 
   - [ ] List content goes to next line when too long to fit
   - [ ] Padding around 'Dungeons & Drragons' title
   - [ ] lighter gray color for gray boxes?
-- [ ] Add screenshots
+- [x] Add screenshots
 - [ ] Editable fields for abilities, race, etc. (not just random generation)
 - [ ] Create pages 2 and 3
