@@ -1,6 +1,7 @@
 import DATA from '../data';
 import axios from 'axios';
-const DND_BASE_URL = "https://www.dnd5eapi.co/api";
+const OLD_BASE_URL = "https://www.dnd5eapi.co/api";
+const DND_BASE_URL = "https://api-beta.open5e.com";
 
 export default class Character {
 
@@ -353,6 +354,7 @@ export default class Character {
     let result = {};
     this.abilities.map( a => {
       result[a.name.split('').slice(0,3).join('')] = a.score;
+      return null;
     });
     return result;
   }
@@ -360,11 +362,12 @@ export default class Character {
   /**
    * random-generation methods
    */
-  randomClass(index){
-    axios.get(`${DND_BASE_URL}/classes/${index}`).then( response => {
+  randomClass(val){
+    axios.get(`${DND_BASE_URL}/classes/${val}`).then( response => {
 
       // set up data
-      let { name, hit_die } = response.data
+      let { name, hit_dice } = response.data
+      let hit_die = parseInt(hit_dice.split('d')[1]);
       let { battleStats, character_info } = this
 
       let abs = this.getShorthandAbilities()
@@ -417,17 +420,27 @@ export default class Character {
     );
   }
 
-  randomRace(index){
+  randomRace(val){
 
-    axios.get(`${DND_BASE_URL}/races/${index}`).then( response => {
+    axios.get(`${DND_BASE_URL}/races/${val}`).then( response => {
 
       // set up
-      let { ability_bonuses, name, speed } = response.data;
+      let { asi, name, speed } = response.data;
+
+      let ability_names = ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"];
+      let ability_bonuses = ability_names.map((name, i) => {
+        for (let j = 0; j < asi.length; j++){
+          if (asi[j].attributes[0] === name){
+            return asi[j].value
+          }
+        }
+        return 0
+      });
 
       // assign data
       let { character_info, abilities, battleStats, smAbilities } = this;
       character_info.race = name;
-      battleStats.speed.value = speed;
+      battleStats.speed.value = speed.walk;
 
       abilities.forEach((ab, i) => {
         ab.score += ability_bonuses[i]
@@ -473,7 +486,7 @@ export default class Character {
   randomize(){
     
     let { abilities, character_info, smAbilities, appearance } = this
-    let { backgrounds, characterNames, eyeColors, skinColors, hairColors } = DATA
+    let { backgrounds, characterNames, eyeColors, skinColors, hairColors, races, classes } = DATA
 
     // abilities
     abilities.forEach(ability => {
@@ -484,11 +497,15 @@ export default class Character {
       });
     });
     
-    // // race, speed, ability bonuses, AC, passive perception, initiative
-    this.randomRace(this.rollDice(1, 9)); // 9 races
+    // race, speed, ability bonuses, AC, passive perception, initiative
+    let race = this.randomFromList(races);
+    console.log(race)
+    this.randomRace(race); // 9 races
 
-    // // class, hitpoints, spellstats
-    this.randomClass(this.rollDice(1, 12)); // 12 classes
+    // class, hitpoints, spellstats
+    let dndClass = this.randomFromList(classes);
+    console.log(dndClass)
+    this.randomClass(dndClass); // 12 classes
 
     // background
     character_info.background = this.randomFromList(backgrounds);

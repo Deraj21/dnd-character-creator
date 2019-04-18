@@ -7,8 +7,6 @@ import TextBox from './components/TextBox'
 import AbilitiesBox from './components/AbilitiesBox'
 import BattleStats from './components/BattleStats'
 
-// const DND_BASE_URL = "http://www.dnd5eapi.co/api"
-
 ////////
 // APP
 ////////
