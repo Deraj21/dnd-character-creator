@@ -6,9 +6,9 @@ It has a bare-bones single-page design. I mimicked the look of a Dungeon and Dra
 
 This site is hosted [here](https://deraj21.github.io/dnd-character-creator) via github-pages.
 
-<img src="https://raw.githubusercontent.com/Deraj21/dnd-character-creator/master/dnd-screenshot.JPG" style="border-radius: 5px; box-shadow: 0px 5px 50px -3px black"/>
+<img src="https://raw.githubusercontent.com/Deraj21/dnd-character-creator/master/dnd-screenshot.JPG" />
 
-<img src="https://raw.githubusercontent.com/Deraj21/dnd-character-creator/master/dnd-print-screenshot.JPG" style="border-radius: 5px; box-shadow: 0px 0px 15px -5px black" />
+<img src="https://raw.githubusercontent.com/Deraj21/dnd-character-creator/master/dnd-print-screenshot.JPG" />
 
 
 
