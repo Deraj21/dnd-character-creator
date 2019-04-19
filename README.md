@@ -6,19 +6,22 @@ It has a bare-bones single-page design. I mimicked the look of a Dungeon and Dra
 
 This site is hosted [here](https://deraj21.github.io/dnd-character-creator) via github-pages.
 
-![screenshot](https://raw.githubusercontent.com/Deraj21/dnd-character-creator/master/dnd-csg-screenshot.JPG "Character Sheet Creator Screenshot")
-![printable](https://raw.githubusercontent.com/Deraj21/dnd-character-creator/master/printable-screenshot.JPG "Printable Character Sheet")
+<img src="https://raw.githubusercontent.com/Deraj21/dnd-character-creator/master/dnd-screenshot.JPG" style="border-radius: 5px; box-shadow: 0px 5px 50px -3px black"/>
+
+<img src="https://raw.githubusercontent.com/Deraj21/dnd-character-creator/master/dnd-print-screenshot.JPG" style="border-radius: 5px; box-shadow: 0px 0px 15px -5px black" />
+
+
 
 ## Laundry list of Future Plans
-- [ ] Find a better D&D api that uses https
+- [x] Find a better D&D api that uses https
+- [x] Add screenshots
 - [ ] Style a little more tightly
-  - [ ] Stretch out small abilities (such as proficiency bonus)
+  - [ ] Padding around 'Dungeons & Dragons' title
   - [ ] Attack table column labels the correct text-size
+  - [ ] Stretch out small abilities (such as proficiency bonus)
   - [ ] Lines in lists go all the way to the end of the box
   - [ ] Double column text box displays nicely
   - [ ] List content goes to next line when too long to fit
-  - [ ] Padding around 'Dungeons & Drragons' title
   - [ ] lighter gray color for gray boxes?
-- [x] Add screenshots
-- [ ] Editable fields for abilities, race, etc. (not just random generation)
 - [ ] Create pages 2 and 3
+- [ ] Editable fields for abilities, race, etc. (not just random generation)
