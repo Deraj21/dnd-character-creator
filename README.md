@@ -10,6 +10,7 @@ This site is hosted [here](https://deraj21.github.io/dnd-character-creator) via 
 
 <img src="https://raw.githubusercontent.com/Deraj21/dnd-character-creator/master/dnd-print-screenshot.JPG" />
 
+<img src="https://raw.githubusercontent.com/Deraj21/dnd-character-creator/master/printout-landscape.JPG" />
 
 
 ## Laundry list of Future Plans
